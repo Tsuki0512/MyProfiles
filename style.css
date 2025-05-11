@@ -1,0 +1,135 @@
+/* style.css */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Lighter gray background */
+    color: #343a40; /* Darker text for better readability */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensure footer stays at bottom */
+}
+
+header {
+    background: #343a40; /* Dark gray header background */
+    color: #ffffff;
+    padding: 1.5rem 0;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.8rem;
+    font-weight: 300; /* Lighter font weight for a modern, clean look */
+}
+
+main {
+    width: 90%;
+    max-width: 800px; /* Optimal width for readability */
+    margin: 2.5rem auto; /* Centering content with space */
+    padding: 2rem;
+    background: #ffffff; /* White background for content area */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Softer, more diffused shadow */
+    border-radius: 10px; /* Rounded corners */
+}
+
+section {
+    padding: 1.5rem 0;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #e9ecef; /* Light border for separation */
+}
+
+section:last-child {
+    border-bottom: none; /* Remove border for the last section */
+    margin-bottom: 0;
+}
+
+h2 {
+    color: #007acc; /* Accent color for section headings */
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    font-weight: 400; /* Slightly bolder than body text but not too heavy */
+}
+
+.profile-photo {
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: cover; /* Ensures the image fills the space nicely */
+    border-radius: 50%; /* Circular photo */
+    margin: 0 auto 1.5rem auto; /* Centered with bottom margin */
+    border: 5px solid #ffffff; /* White border to make it pop */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Shadow for the photo */
+}
+
+#profile {
+    text-align: center;
+    padding-top: 0; /* Remove top padding if photo is the first element */
+}
+
+a {
+    color: #007acc; /* Consistent link color */
+    text-decoration: none;
+    font-weight: 500; /* Slightly bolder links */
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
+    color: #0056b3; /* Darker shade on hover/focus for feedback */
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background: #343a40; /* Consistent with header */
+    color: #f8f9fa; /* Light text on dark background */
+    width: 100%;
+    margin-top: auto; /* Pushes footer to the bottom */
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    .profile-photo {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.4rem;
+    }
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+    body {
+        font-size: 0.95rem; /* Slightly smaller base font for small devices */
+    }
+    main {
+        padding: 1rem;
+    }
+}
