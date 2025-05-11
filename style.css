@@ -4,92 +4,126 @@ body {
     line-height: 1.7;
     margin: 0;
     padding: 0;
-    background-color: #f8f9fa; /* Lighter gray background */
-    color: #343a40; /* Darker text for better readability */
+    background-color: #FAF3E0; /* 改为：非常浅的、柔和的暖米色 */
+    color: #5D4037; /* 改为：柔和的深棕色文字 */
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-height: 100vh; /* Ensure footer stays at bottom */
+    min-height: 100vh;
 }
 
 header {
-    background: #343a40; /* Dark gray header background */
-    color: #ffffff;
+    background: #FFCCBC; /* 改为：柔和的浅桃珊瑚色 */
+    color: #5D4037; /* 改为：深棕色文字，以在浅背景上保持对比度 */
     padding: 1.5rem 0;
     text-align: center;
     width: 100%;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* 稍微减弱阴影 */
 }
 
 header h1 {
     margin: 0;
     font-size: 2.8rem;
-    font-weight: 300; /* Lighter font weight for a modern, clean look */
+    font-weight: 300;
 }
 
 main {
     width: 90%;
-    max-width: 800px; /* Optimal width for readability */
-    margin: 2.5rem auto; /* Centering content with space */
+    max-width: 800px;
+    margin: 2.5rem auto;
     padding: 2rem;
-    background: #ffffff; /* White background for content area */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Softer, more diffused shadow */
-    border-radius: 10px; /* Rounded corners */
+    background: #ffffff; /* 保持：白色背景以保持内容区域的明亮和清晰 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* 稍微减弱阴影 */
+    border-radius: 10px;
+}
+
+/* 新增：用于包裹照片和关于我部分的容器 */
+.profile-about-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #E0D8C0; /* 改为：更柔和的暖灰褐色分隔线 */
+    padding-bottom: 1.5rem;
 }
 
 section {
     padding: 1.5rem 0;
     margin-bottom: 1.5rem;
-    border-bottom: 1px solid #e9ecef; /* Light border for separation */
+    border-bottom: 1px solid #E0D8C0; /* 改为：更柔和的暖灰褐色分隔线 */
 }
 
 section:last-child {
-    border-bottom: none; /* Remove border for the last section */
+    border-bottom: none;
     margin-bottom: 0;
 }
 
 h2 {
-    color: #007acc; /* Accent color for section headings */
+    color: #BF5A36; /* 改为：柔和的陶土色/暗橘色 */
     margin-top: 0;
     margin-bottom: 1rem;
     font-size: 1.8rem;
-    font-weight: 400; /* Slightly bolder than body text but not too heavy */
+    font-weight: 400;
 }
 
-.profile-photo {
+.profile-photo { /* 这个可能是旧的圆形照片样式，也一并更新边框色 */
     display: block;
     width: 180px;
     height: 180px;
-    object-fit: cover; /* Ensures the image fills the space nicely */
-    border-radius: 50%; /* Circular photo */
-    margin: 0 auto 1.5rem auto; /* Centered with bottom margin */
-    border: 5px solid #ffffff; /* White border to make it pop */
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* Shadow for the photo */
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem auto;
+    border: 5px solid #FAF3E0; /* 改为：与新页面背景协调的边框颜色 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 #profile {
-    text-align: center;
-    padding-top: 0; /* Remove top padding if photo is the first element */
+    /* 修改：使其成为flex项目的一部分 */
+    flex: 0 0 180px;
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+    text-align: left;
+}
+
+.profile-photo { /* 这个是当前方形照片的样式 */
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0;
+    border: 5px solid #FAF3E0; /* 改为：与新页面背景协调的边框颜色 */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+#about {
+    /* 修改：使其成为flex项目的一部分 */
+    flex: 1;
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 a {
-    color: #007acc; /* Consistent link color */
+    color: #BF5A36; /* 改为：与标题一致的柔和陶土色 */
     text-decoration: none;
-    font-weight: 500; /* Slightly bolder links */
+    font-weight: 500;
 }
 
 a:hover, a:focus {
     text-decoration: underline;
-    color: #0056b3; /* Darker shade on hover/focus for feedback */
+    color: #A5482A; /* 改为：陶土色的深色变体 */
 }
 
 footer {
     text-align: center;
     padding: 1.5rem;
-    background: #343a40; /* Consistent with header */
-    color: #f8f9fa; /* Light text on dark background */
+    background: #FFCCBC; /* 改为：与头部一致的柔和浅桃珊瑚色 */
+    color: #5D4037; /* 改为：深棕色文字，以在浅背景上保持对比度 */
     width: 100%;
-    margin-top: auto; /* Pushes footer to the bottom */
+    margin-top: auto;
     font-size: 0.9rem;
 }
 
@@ -113,6 +147,31 @@ footer {
         width: 150px;
         height: 150px;
     }
+
+    /* 新增/修改：响应式调整新的布局容器 */
+    .profile-about-container {
+        flex-direction: column; /* 在小屏幕上垂直堆叠 */
+        align-items: center; /* 居中对齐堆叠的项 */
+    }
+
+    #profile {
+        flex-basis: auto; /* 重置flex-basis */
+        width: auto; /* 允许宽度自适应内容，或设为100% */
+        margin-bottom: 1.5rem; /* 堆叠时恢复底部间距 */
+        text-align: center; /* 照片区域居中 */
+    }
+
+    .profile-photo {
+        margin: 0 auto 1.5rem auto; /* 修改：在堆叠时重新居中照片 */
+        /* width: 150px; height: 150px; // 已有响应式规则处理尺寸 */
+    }
+
+    #about {
+        text-align: center; /* 在小屏幕堆叠时，关于我部分的文本也居中 */
+    }
+    #about h2 {
+        text-align: center; /* 标题也居中 */
+    }
 }
 
 @media (max-width: 480px) {
@@ -131,5 +190,9 @@ footer {
     }
     main {
         padding: 1rem;
+    }
+    /* 确保在更小屏幕上，如果上面设置了text-align: center，这里也保持一致或按需调整 */
+    #about {
+        text-align: center;
     }
 }
